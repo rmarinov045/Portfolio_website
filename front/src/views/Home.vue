@@ -1,18 +1,39 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <navbar ref="navbar"/>
+    <home_component @click="removeDropDown"/>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import home_component from "@/components/Home_component";
+import navbar from "@/components/navbar";
 
 export default {
   name: 'Home',
   components: {
-    HelloWorld
+    home_component,
+    navbar
+  },
+  created() {
+    document.title = 'Home'
+  },
+  data() {
+    return {
+    }
+  },
+  methods: {
+    removeDropDown() {
+      if (this.$refs.navbar.$refs['burger'].classList.contains('rotate-90')) {
+        this.$refs.navbar.enableDropdown()
+      }
+      this.$refs.navbar.isSearchClicked = false
+    }
   }
 }
 </script>
+
+<style scoped>
+
+</style>
