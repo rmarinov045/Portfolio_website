@@ -1,30 +1,21 @@
 <template>
-  <div class="home">
+  <div class="skill-set">
     <navbar ref="navbar"/>
-    <home_component @click="removeDropDown"/>
+    <skillset_component @click="removeDropDown"/>
     <footer_component @click="removeDropDown"/>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import home_component from "@/components/Home_component";
-import navbar from "@/components/navbar";
+import Navbar from "@/components/navbar";
 import footer_component from "@/components/footer_component";
+import skillset_component from "@/components/skillset_component";
 
 export default {
-  name: 'Home',
-  components: {
-    home_component,
-    navbar,
-    footer_component
-  },
+  name: "Skillset",
+  components: {skillset_component, Navbar, footer_component},
   created() {
-    document.title = 'Home'
-  },
-  data() {
-    return {
-    }
+    document.title = 'Skillset'
   },
   methods: {
     removeDropDown() {

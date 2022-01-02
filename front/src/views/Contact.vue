@@ -1,30 +1,19 @@
 <template>
-  <div class="home">
     <navbar ref="navbar"/>
-    <home_component @click="removeDropDown"/>
+    <contact_component @click="removeDropDown"/>
     <footer_component @click="removeDropDown"/>
-  </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import home_component from "@/components/Home_component";
-import navbar from "@/components/navbar";
+import Navbar from "@/components/navbar";
 import footer_component from "@/components/footer_component";
+import contact_component from "@/components/contact_component";
 
 export default {
-  name: 'Home',
-  components: {
-    home_component,
-    navbar,
-    footer_component
-  },
+  name: "Contact",
+  components: {Navbar, footer_component, contact_component},
   created() {
-    document.title = 'Home'
-  },
-  data() {
-    return {
-    }
+    document.title = 'Contact me'
   },
   methods: {
     removeDropDown() {
