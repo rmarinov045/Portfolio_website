@@ -1,5 +1,7 @@
 <template>
 
+  <div class="">
+
   <!-- Mobile -->
 
   <div class="p-2 lg:hidden mt-10">
@@ -16,7 +18,7 @@
 
     <div class="flex flex-col gap-1 mt-10 bg-black rounded shadow-xl bg-opacity-95 text-white w-5/6 m-auto p-4">
       <h1 class="font-bold text-xl">What I do</h1>
-      <p class="text-xs text-gray-400">Lorem ipsum solor domet</p>
+      <p class="text-xs text-gray-400">Technologies</p>
 
       <div class="grid grid-cols-3 grid-rows-2 gap-4 mt-4">
         <div class="flex flex-col justify-center items-center gap-2 bg-opacity-10 rounded shadow-xl bg-white p-3">
@@ -96,7 +98,7 @@
 
   <!-- Large screens -->
 
-  <div class="hidden lg:block lg:mt-10 lg:p-2">
+  <div class="hidden lg:block lg:mt-10 lg:p-2 xl:h-screen">
 
     <div class="flex w-full justify-evenly items-center">
       <div class="flex flex-col text-left">
@@ -110,7 +112,7 @@
 
     <div class="flex flex-col gap-1 mt-10 bg-black rounded shadow-xl bg-opacity-95 text-white w-5/6 m-auto p-4">
       <h1 class="font-bold text-xl">What I do</h1>
-      <p class="text-xs text-gray-400">Lorem ipsum solor domet</p>
+      <p class="text-xs text-gray-400">Technologies</p>
 
       <div class="grid grid-cols-3 grid-rows-2 gap-4 mt-4">
         <div class="flex flex-col justify-center items-center gap-2 bg-opacity-10 rounded shadow-xl bg-white p-3">
@@ -175,9 +177,9 @@
 
     </div>
 
-    <div class="mt-10 mb-7">...Learning and empowering every day!</div>
+    <div class="mt-20 mb-20">...Learning and empowering every day!</div>
 
-    <div class="flex flex-col bg-white shadow-2xl text-left p-4 w-full mb-5">
+    <div class="flex flex-col bg-white shadow-2xl text-left p-4 w-full mb-5 xl:w-1/2 xl:m-auto">
       <div class="flex items-center">
         <h1 class="font-bold text-2xl">About myself:</h1>
         <p ref='toggle-field' @click="editFunction" class="ml-auto cursor-pointer underline transform transition ease-in-out 150 font-bold">{{ editText }}</p>
@@ -185,6 +187,8 @@
       <br/>
       <p ref="text-field" class="break-words p-2 outline-none transform transition ease-in-out 50" :contenteditable="editable">{{ aboutText }}</p>
     </div>
+
+  </div>
 
   </div>
 
@@ -196,7 +200,7 @@ export default {
   data() {
     return {
       editText: 'Edit',
-      aboutText: 'test',
+      aboutText: 'Placeholder intro',
       editable: false
     }
   },

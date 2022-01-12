@@ -1,5 +1,7 @@
 <template>
 
+  <div class="">
+
   <!-- Mobile -->
 
   <div class="lg:hidden p-4">
@@ -119,6 +121,8 @@
   </div>
 
   <div id="right-image" class="w-1/2">
+  </div>
+
   </div>
 
   </div>
