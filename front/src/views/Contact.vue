@@ -1,7 +1,9 @@
 <template>
+  <div class="contact">
     <navbar ref="navbar"/>
     <contact_component @click="removeDropDown"/>
     <footer_component @click="removeDropDown"/>
+  </div>
 </template>
 
 <script>
@@ -21,6 +23,7 @@ export default {
         this.$refs.navbar.enableDropdown()
       }
       this.$refs.navbar.isSearchClicked = false
+      this.$refs.navbar.searchFieldOpen = false
     }
   }
 }

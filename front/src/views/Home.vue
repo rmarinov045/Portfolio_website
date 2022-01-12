@@ -1,21 +1,21 @@
 <template>
   <div class="home">
     <navbar ref="navbar"/>
-    <home_component @click="removeDropDown"/>
+    <Home_component @click="removeDropDown"/>
     <footer_component @click="removeDropDown"/>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import home_component from "@/components/Home_component";
+import Home_component from "@/components/Home_component";
 import navbar from "@/components/navbar";
 import footer_component from "@/components/footer_component";
 
 export default {
   name: 'Home',
   components: {
-    home_component,
+    Home_component,
     navbar,
     footer_component
   },
@@ -32,6 +32,7 @@ export default {
         this.$refs.navbar.enableDropdown()
       }
       this.$refs.navbar.isSearchClicked = false
+      this.$refs.navbar.searchFieldOpen = false
     }
   }
 }

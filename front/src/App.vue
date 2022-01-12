@@ -2,6 +2,12 @@
   <router-view/>
 </template>
 
+<script>
+ export default {
+   name: 'Portfolio-website'
+ }
+</script>
+
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;

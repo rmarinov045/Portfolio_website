@@ -23,6 +23,7 @@ export default {
         this.$refs.navbar.enableDropdown()
       }
       this.$refs.navbar.isSearchClicked = false
+      this.$refs.navbar.searchFieldOpen = false
     }
   }
 }
