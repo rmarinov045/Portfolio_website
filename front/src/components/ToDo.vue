@@ -1,5 +1,5 @@
 <template>
-  <div class="to-do h-screen">
+  <div class="to-do h-full">
 
     <!-- Mobile -->
 
@@ -44,11 +44,13 @@
           <hr class="mb-4 mt-2"/>
           <form class="flex flex-wrap gap-10 w-full">
             <label class="flex flex-col justify-start items-start gap-2 font-bold">Name<input required
+                                                                                              id="name-input"
                                                                                               v-model="taskName"
                                                                                               class="p-2 border-2 text-sm rounded border-black focus:outline-none focus:border-green-500 transform transition ease-in-out 150"
                                                                                               type="text"
                                                                                               placeholder="Task name"></label>
             <label class="flex flex-col justify-start items-start gap-2 font-bold">Place<input required
+                                                                                               id="place-input"
                                                                                                v-model="taskPlace"
                                                                                                class="p-2 border-2 text-sm rounded border-black focus:outline-none focus:border-green-500 transform transition ease-in-out 150"
                                                                                                type="text"
@@ -68,6 +70,7 @@
           </div>
         </div>
 
+        <p class="mt-96">... made with love by</p>
 
       </div>
 
@@ -179,6 +182,8 @@ export default {
         this.addTaskText = 'Close'
         this.addTaskButton = 'hover:opacity-75 bg-red-700 ml-auto p-2 rounded font-bold text-white'
         this.taskTitle = 'Add Task'
+        document.getElementById('name-input').classList.remove('border-red-500')
+        document.getElementById('place-input').classList.remove('border-red-500')
       } else {
         this.addTaskText = 'Add Task'
         this.addTaskButton = 'hover:opacity-75 bg-green-500 ml-auto p-2 rounded font-bold text-white'
@@ -192,6 +197,20 @@ export default {
           this.taskPlace = taskPlace
           this.taskDescription = taskDescription
           this.taskID = taskID
+        }
+      }
+
+      if (name.length || place.length === 0) {
+        if (name.length === 0 && place.length === 0) {
+          document.getElementById('name-input').classList.add('border-red-500')
+          document.getElementById('place-input').classList.add('border-red-500')
+          return
+        } else if (name.length === 0) {
+          document.getElementById('name-input').classList.add('border-red-500')
+          return;
+        } else if (place.length === 0) {
+          document.getElementById('place-input').classList.add('border-red-500')
+          return;
         }
       }
 
@@ -209,11 +228,8 @@ export default {
     },
     removeTask(id) {
         for (let items of this.tasks) {
-          console.log(id)
-          console.log(items.taskID)
             if (id === items.taskID) {
               this.tasks = this.tasks.filter(task => task.taskID !== items.taskID)
-              console.log(this.tasks)
             }
         }
         return this.tasks

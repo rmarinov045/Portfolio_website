@@ -4,6 +4,7 @@ import Skillset from "@/views/Skillset";
 import Contact from "@/views/Contact";
 import Projects from "@/views/Projects";
 import ToDoList from "@/views/ToDoList";
+import Weather from '@/views/Weather'
 
 const routes = [
   {
@@ -30,6 +31,11 @@ const routes = [
     path: "/to-do-list",
     name: "ToDoList",
     component: ToDoList
+  },
+  {
+    path: '/weather',
+    name: 'Weather',
+    component: Weather
   }
 ]
 
