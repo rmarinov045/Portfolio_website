@@ -5,6 +5,7 @@ import Contact from "@/views/Contact";
 import Projects from "@/views/Projects";
 import ToDoList from "@/views/ToDoList";
 import Weather from '@/views/Weather'
+import CalculatorApp from "@/views/Calculator-app";
 
 const routes = [
   {
@@ -36,6 +37,11 @@ const routes = [
     path: '/weather',
     name: 'Weather',
     component: Weather
+  },
+  {
+    path: "/calculator",
+    name: 'Calculator',
+    component: CalculatorApp
   }
 ]
 

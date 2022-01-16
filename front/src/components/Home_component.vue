@@ -12,14 +12,14 @@
           <router-link class="hover:opacity-75 transform transition ease-in-out 150" to="Projects"><p class="text-black underline font-bold">Click here for my projects!</p></router-link>
         </div>
         <div class="w-1/3">
-          <img class="h-full" alt="tech-image" src="https://images.unsplash.com/photo-1621361365424-06f0e1eb5c49?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=464&q=80">
+          <img class="h-full" alt="tech-image" src="laptop_photo.jpeg">
         </div>
       </div>
 
     <div class="flex h-72 h-full">
 
       <div class="w-2/3">
-        <img class="h-full w-full object-cover" src="https://images.unsplash.com/photo-1579403124614-197f69d8187b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fGNvZGV8ZW58MHwxfDB8fA%3D%3D&auto=format&fit=crop&w=400&q=60" alt="start-page-image">
+        <img class="h-full w-full object-cover" src="Monitor_photo.jpeg" alt="start-page-image">
       </div>
 
       <div class="w-1/3 flex items-center justify-center">
@@ -40,14 +40,14 @@
         <router-link class="hover:opacity-75 transform transition ease-in-out 150" to="Projects"><p class="text-black underline font-bold">Click here for my projects!</p></router-link>
       </div>
       <div class="w-1/3">
-        <img class="h-full w-full" alt="tech-image" src="https://images.unsplash.com/photo-1621361365424-06f0e1eb5c49?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=464&q=80">
+        <img class="h-full w-full" alt="tech-image" src="laptop_photo.jpeg">
       </div>
     </div>
 
     <div class="flex h-72">
 
       <div class="w-2/3">
-        <img class="h-full w-full object-cover" src="https://images.unsplash.com/photo-1579403124614-197f69d8187b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fGNvZGV8ZW58MHwxfDB8fA%3D%3D&auto=format&fit=crop&w=400&q=60" alt="start-page-image">
+        <img class="h-full w-full object-cover" src="Monitor_photo.jpeg" alt="start-page-image">
       </div>
 
       <div class="w-1/3 flex items-center justify-center">

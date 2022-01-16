@@ -4,7 +4,7 @@
 
   <div class="lg:hidden w-full flex items-center p-2 pl-4 pr-4 text-white opacity-90 shadow top-0 bg-black">
     <div class="mr-6">
-      <router-link to="/Home"><img src="favicon.ico" alt="logo_icon" class="rounded"></router-link>
+      <router-link to="/Home"><img src="favicon.ico" alt="logo_icon" class="rounded h-10 w-10"></router-link>
     </div>
     <div class="">
       <p class="font-extrabold text-sm shadow-inner">Made by: Marinoff</p>
@@ -120,7 +120,9 @@ export default {
         {id: 2, name: 'Contact'},
         {id: 3, name: 'Projects'},
         {id: 4, name: 'Skillset'},
-        {id: 5, name: 'to-do-list'}
+        {id: 5, name: 'to-do-list'},
+        {id: 6, name: 'Weather'},
+        {id: 7, name: 'Calculator'}
       ],
       searchShown: [],
       searchWordClass: '',

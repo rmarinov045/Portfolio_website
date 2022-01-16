@@ -80,9 +80,9 @@
 
     <!-- Large Screens -->
 
-    <div class="lg:block hidden w-full p-4">
+    <div class="lg:block hidden w-full h-full p-4">
 
-      <h1 class="text-3xl font-bold">To do list</h1>
+      <h1 class="text-3xl font-bold mt-24 mb-24">To do list</h1>
 
       <div class="w-full h-full rounded-xl mt-10 p-2 pl-4 pr-4">
 
@@ -94,8 +94,8 @@
         <hr class="mt-10"/>
 
         <div v-show="!isAddTaskClicked" class="grid grid-cols-4 items-start gap-4 items-center mt-10">
-          <div class="flex items-start pl-4 p-2" v-for="task in tasks" :key="task.taskID">
-            <div class="flex flex-col items-start border-2 border-black w-full pl-4 pr-4 p-1 mt-4 gap-4 rounded-2xl pb-4">
+          <div class="flex items-start pl-4 p-2 min-w-0 break-all" v-for="task in tasks" :key="task.taskID">
+            <div class="flex flex-col items-start bg-gray-200 w-full shadow-xl pl-4 pr-4 p-2 mt-4 gap-4 rounded-2xl pb-4 break-words">
               <p class="font-bold border-b-2 border-black w-full flex justify-center items-center pb-2">{{ task.taskName }}
                 <svg @click="removeTask(task.taskID)" xmlns="http://www.w3.org/2000/svg" class="cursor-pointer h-6 w-6 text-red-500 ml-auto" fill="none" viewBox="0 0 24 24"
                      stroke="currentColor">
@@ -150,6 +150,7 @@
           </div>
         </div>
 
+        <p class="mt-96">... made with love by</p>
 
       </div>
 

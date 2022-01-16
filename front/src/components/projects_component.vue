@@ -14,7 +14,7 @@
 
             <div class="flex justify-center items-center flex-col">
               <h1 class="font-bold text-3xl">VueJS Calculator</h1>
-              <p class="mt-2">GitHub link: <a href="">Insert it here</a></p>
+              <p class="mt-2">GitHub link: <router-link to="Calculator">Insert it here</router-link></p>
             </div>
           </div>
         </transition>
