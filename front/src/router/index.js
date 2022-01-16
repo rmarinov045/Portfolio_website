@@ -9,6 +9,11 @@ import CalculatorApp from "@/views/Calculator-app";
 
 const routes = [
   {
+    path: '/',
+    name: 'default',
+    redirect: '/home'
+  },
+  {
     path: '/home',
     name: 'Home',
     component: Home
