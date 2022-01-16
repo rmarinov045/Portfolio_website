@@ -12,14 +12,14 @@
           <router-link class="hover:opacity-75 transform transition ease-in-out 150" to="Projects"><p class="text-black underline font-bold">Click here for my projects!</p></router-link>
         </div>
         <div class="w-1/3">
-          <img class="h-full" alt="tech-image" src="laptop_photo.jpeg">
+          <img class="h-full" alt="tech-image" src="../assets/laptop_photo.jpeg">
         </div>
       </div>
 
     <div class="flex h-72 h-full">
 
       <div class="w-2/3">
-        <img class="h-full w-full object-cover" src="Monitor_photo.jpeg" alt="start-page-image">
+        <img class="h-full w-full object-cover" src="../assets/Monitor_photo.jpeg" alt="start-page-image">
       </div>
 
       <div class="w-1/3 flex items-center justify-center">
@@ -40,14 +40,14 @@
         <router-link class="hover:opacity-75 transform transition ease-in-out 150" to="Projects"><p class="text-black underline font-bold">Click here for my projects!</p></router-link>
       </div>
       <div class="w-1/3">
-        <img class="h-full w-full" alt="tech-image" src="laptop_photo.jpeg">
+        <img class="h-full w-full" alt="tech-image" src="../assets/laptop_photo.jpeg">
       </div>
     </div>
 
     <div class="flex h-72">
 
       <div class="w-2/3">
-        <img class="h-full w-full object-cover" src="Monitor_photo.jpeg" alt="start-page-image">
+        <img class="h-full w-full object-cover" src="../assets/Monitor_photo.jpeg" alt="start-page-image">
       </div>
 
       <div class="w-1/3 flex items-center justify-center">
