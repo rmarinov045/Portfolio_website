@@ -2,7 +2,7 @@
 
   <!-- Mobile navbar sandwich -->
 
-  <div class="lg:hidden w-full flex items-center p-2 pl-4 pr-4 text-white shadow top-0 bg-black">
+  <div class="lg:hidden w-screen flex items-center p-2 pl-4 pr-4 text-white shadow top-0 bg-black">
     <div class="mr-6">
       <router-link to="/Home"><img src="../assets/newlogo.png" alt="logo_icon" class="rounded h-10 w-10"></router-link>
     </div>
@@ -65,7 +65,7 @@
 
   <!-- lg and above screens -->
 
-  <div class="hidden lg:block lg:sticky lg:top-0 lg:shadow-lg relative z-10">
+  <div class="hidden lg:block lg:sticky lg:top-0 lg:shadow-lg relative z-10 border-b-2 border-green-500">
     <div class="flex bg-black pl-4 w-full"> <!-- Add black bg here -->
       <div class="w-1/6 pt-2 pb-2 gap-3 flex text-white justify-center items-center">
         <router-link to="/Home" class="mr-auto flex items-center w-1/3"><img src="../assets/newlogo.png" alt="logo_icon" class="rounded w-12 h-12">

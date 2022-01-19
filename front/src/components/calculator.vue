@@ -182,6 +182,11 @@ export default {
           this.calcValue = this.first * this.second
           break
         case 'divide':
+          if (Number(this.second) === 0) {
+            this.prevValue = ''
+            this.calcValue = 'Error'
+            break
+          }
           this.prevValue = ''
           this.second = Number(this.calcValue)
           this.calcValue = this.first / this.second

@@ -89,11 +89,25 @@ export default {
       noResultFoundMessage: 'No city with this name has been found. Please try again with another one.',
       noResultFound: false,
       cities: [],
-      isNewElement: false
+      isNewElement: false,
+      apiCalls: 0
     }
   },
   methods: {
     async getWeather(cityName) {
+
+      if (this.apiCalls === 60) {
+        this.noResultFound = true
+        this.noResultFoundMessage = `Maximum number of attempts reached. Please try again in 60 seconds`
+        return
+      }
+
+      setTimeout(() => {
+        this.apiCalls = 0
+      }, 60000)
+
+      this.apiCalls++
+
       const apiKey = "&appid=b13bc36f06f4707b02ec99c138870fe8&units=metric"
       const url = "https://api.openweathermap.org/data/2.5/weather?"
       let city = `q=${cityName}`

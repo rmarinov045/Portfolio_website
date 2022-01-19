@@ -4,9 +4,9 @@
 
   <!-- Mobile -->
 
-  <div class="p-2 lg:hidden mt-10">
+  <div class="p-4 lg:hidden mt-10 h-screen flex flex-col gap-10 md:gap-32 md:h-screen md:flex md:flex-col">
 
-    <div class="flex w-full justify-evenly items-center">
+    <div class="flex w-full justify-evenly items-center md:mt-4">
       <div class="flex flex-col text-left">
         <h1 class="font-bold text-2xl">Radostin Marinov</h1>
         <p class="">Front end developer</p>
@@ -16,7 +16,7 @@
       </div>
     </div>
 
-    <div class="flex flex-col gap-1 mt-10 bg-black rounded shadow-xl bg-opacity-95 text-white w-5/6 m-auto p-4">
+    <div class="flex flex-col gap-1 mt-10 bg-black rounded shadow-xl bg-opacity-95 text-white w-full ml-auto mr-auto p-4">
       <h1 class="font-bold text-xl">What I do</h1>
       <p class="text-xs text-gray-400">Technologies</p>
 
@@ -98,7 +98,7 @@
 
   <!-- Large screens -->
 
-  <div class="hidden lg:block lg:mt-10 lg:p-2 xl:h-screen">
+  <div class="hidden lg:block lg:mt-10 lg:p-2 xl:h-full">
 
     <div class="flex w-full justify-evenly items-center">
       <div class="flex flex-col text-left">
@@ -179,7 +179,7 @@
 
     <div class="mt-20 mb-20">...Learning and empowering every day!</div>
 
-    <div class="flex flex-col bg-white shadow-2xl text-left p-4 w-full mb-5 xl:w-1/2 xl:m-auto">
+    <div class="flex flex-col bg-white shadow-2xl text-left p-4 w-full mb-5 xl:w-1/2 xl:m-auto xl:mb-20">
       <div class="flex items-center">
         <h1 class="font-bold text-2xl">About myself:</h1>
         <p ref='toggle-field' @click="editFunction" class="ml-auto cursor-pointer underline transform transition ease-in-out 150 font-bold">{{ editText }}</p>

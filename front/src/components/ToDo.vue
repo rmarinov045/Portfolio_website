@@ -1,9 +1,9 @@
 <template>
-  <div class="to-do h-full">
+  <div class="to-do h-full flex-grow">
 
     <!-- Mobile -->
 
-    <div class="lg:hidden w-full p-4">
+    <div class="lg:hidden w-full p-4 h-full">
 
       <h1 class="text-3xl font-bold">To do list</h1>
 
@@ -70,7 +70,7 @@
           </div>
         </div>
 
-        <p class="mt-96">... made with love by</p>
+        <p class="mt-20">... made with love by</p>
 
       </div>
 

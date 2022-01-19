@@ -1,6 +1,6 @@
 <template>
   <router-view v-cloak v-show="isLoaded" class="main"/>
-  <loader v-if="!isLoaded"/>
+  <loader v-if="!isLoaded" class="loader"/>
 </template>
 
 <script>
@@ -15,7 +15,7 @@ export default {
     }
   },
   created() {
-    setTimeout(() => this.isLoaded = true, 2000)
+    this.isLoaded = true
   }
 }
 </script>
@@ -29,9 +29,8 @@ export default {
   color: #2c3e50;
 }
 
-.main {
-  animation: loading 750ms;
-  animation-direction: alternate;
+.loader {
+  transition: ease-in-out 750ms;
 }
 
 @keyframes loading {
