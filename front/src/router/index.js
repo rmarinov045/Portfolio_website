@@ -34,7 +34,7 @@ const routes = [
     component: Projects,
   },
   {
-    path: "/to-do-list",
+    path: "/To Do List",
     name: "ToDoList",
     component: ToDoList
   },

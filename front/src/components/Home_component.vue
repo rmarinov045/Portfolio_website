@@ -67,10 +67,10 @@
       <!--      </div>-->
 
       <!--    </div>-->
-      <div class="flex h-full mb-20 p-4">
+      <div class="flex h-full p-4 pr-0 mb-10">
 
-        <div class="h-full w-1/2 flex justify-center items-center h-full border-b-2 border-green-500">
-          <div class="flex flex-col p-10 w-full h-full gap-20 mt-20 items-center">
+        <div class="h-full w-1/2 flex flex-col justify-center items-center h-full">
+          <div class="flex flex-col p-10 w-full h-full gap-20 mt-20 items-center border-b-2 border-green-500">
             <h1 class="text-7xl font-extrabold">I am Radostin Marinov</h1>
             <p class="text-bold text-xl mt-2">Hello. I am Radostin Marinov (Rado). I am 22 and a beginner front end
               developer. My passion for tech and self development is my main driver. Find out more below!</p>
@@ -83,10 +83,10 @@
 
         </div>
 
-        <div class="w-1/2 flex flex-col p-10">
+        <div class="w-1/2 flex flex-col p-10 pr-0">
 
-          <div class="h-full w-full border-l-2 border-black p-10 flex justify-center items-center">
-                <img src="../assets/Monitor_photo.jpeg" class="h-full rounded-2xl w-4/5">
+          <div class="h-full w-full border-l-2 border-black p-10 pr-0 flex justify-end items-start">
+                <img src="../assets/homepage_bg.jpeg" class="rounded-2xl w-4/5">
           </div>
 
         </div>

@@ -2,7 +2,7 @@
 
   <!-- Mobile navbar sandwich -->
 
-  <div class="lg:hidden w-screen flex items-center p-2 pl-4 pr-4 text-white shadow top-0 bg-black">
+  <div class="lg:hidden w-full flex items-center p-2 pl-4 pr-4 text-white shadow top-0 bg-black">
     <div class="mr-6">
       <router-link to="/Home"><img src="../assets/newlogo.png" alt="logo_icon" class="rounded h-10 w-10"></router-link>
     </div>
@@ -120,7 +120,7 @@ export default {
         {id: 2, name: 'Contact'},
         {id: 3, name: 'Projects'},
         {id: 4, name: 'Skillset'},
-        {id: 5, name: 'to-do-list'},
+        {id: 5, name: 'To Do List'},
         {id: 6, name: 'Weather'},
         {id: 7, name: 'Calculator'}
       ],

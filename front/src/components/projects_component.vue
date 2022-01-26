@@ -3,7 +3,7 @@
   <!-- Mobile not declared yet, may be usable with different screens-->
 
   <div id="projects" class="w-full md:h-screen xl:w-full xl:h-full overflow-hidden relative z-0">
-    <div class="w-full mt-10 md:mt-40">
+    <div class="w-full mt-10 md:mt-20">
         <transition class="content-to-right">
           <div class="flex justify-start">
             <div class="w-1/3 flex justify-center items-center">
