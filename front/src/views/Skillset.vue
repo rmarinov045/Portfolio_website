@@ -1,9 +1,9 @@
 <template>
-  <div class="skill-set">
+  <div class="skill-set flex flex-col flex-grow">
     <navbar ref="navbar"/>
     <skillset_component @click="removeDropDown"/>
-    <footer_component @click="removeDropDown"/>
   </div>
+  <footer_component @click="removeDropDown"/>
 </template>
 
 <script>

@@ -2,7 +2,7 @@
 
   <!-- Mobile not declared yet, may be usable with different screens-->
 
-  <div id="projects" class="w-full md:h-screen xl:w-full xl:h-full overflow-hidden relative z-0">
+  <div id="projects" class="w-full md:h-full xl:w-full xl:h-full overflow-hidden relative z-0">
     <div class="w-full mt-10 md:mt-20">
         <transition class="content-to-right">
           <div class="flex justify-start">

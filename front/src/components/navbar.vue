@@ -2,7 +2,7 @@
 
   <!-- Mobile navbar sandwich -->
 
-  <div class="lg:hidden w-full flex items-center p-2 pl-4 pr-4 text-white shadow top-0 bg-black">
+  <div class="lg:hidden w-full flex items-center p-2 pl-4 pr-4 text-white shadow top-0 bg-black border-b-2 border-green-500">
     <div class="mr-6">
       <router-link to="/Home"><img src="../assets/newlogo.png" alt="logo_icon" class="rounded h-10 w-10"></router-link>
     </div>
