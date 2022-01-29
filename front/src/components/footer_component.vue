@@ -10,6 +10,7 @@
         </svg>
       </a>
       <a href="https://bg.linkedin.com/in/%D1%80%D0%B0%D0%B4%D0%BE%D1%81%D1%82%D0%B8%D0%BD-%D0%BC%D0%B0%D1%80%D0%B8%D0%BD%D0%BE%D0%B2-162a621a7"
+         rel="noreferrer" target="_blank"
          class="hover:opacity-75 transform transition ease-in-out 150">
         <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
              width="24" height="24"
@@ -20,6 +21,7 @@
         </svg>
       </a>
       <a href="https://bg-bg.facebook.com/people/%D0%A0%D0%B0%D0%B4%D0%BE%D1%81%D1%82%D0%B8%D0%BD-%D0%9C%D0%B0%D1%80%D0%B8%D0%BD%D0%BE%D0%B2/100002531510370/"
+         rel="noreferrer" target="_blank"
          class="hover:opacity-75 transform transition ease-in-out 150">
         <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
              width="24" height="24"
