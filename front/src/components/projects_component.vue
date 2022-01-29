@@ -29,7 +29,7 @@
           </div>
 
           <div class="flex justify-center items-center flex-col">
-            <h1 class="font-bold text-3xl">API usage</h1>
+            <h1 class="font-bold text-3xl">Weather app</h1>
             <p class="mt-2"><router-link to="/Weather">Click here for demo!</router-link></p>
           </div>
         </div>
