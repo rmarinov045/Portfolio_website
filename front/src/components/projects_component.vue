@@ -14,7 +14,7 @@
 
             <div class="flex justify-center items-center flex-col">
               <h1 class="font-bold text-3xl">VueJS Calculator</h1>
-              <p class="mt-2">GitHub link: <router-link to="Calculator">Insert it here</router-link></p>
+              <router-link to="Calculator">Click here for demo!</router-link>
             </div>
           </div>
         </transition>
@@ -46,7 +46,7 @@
 
           <div class="flex justify-center items-center flex-col gap-2">
             <h1 class="font-bold text-3xl">To Do list</h1>
-            <p class="mt-2"><router-link to="/to-do-list" class="">Click here for demo!</router-link></p>
+            <p class="mt-2"><router-link to="/To Do List" class="">Click here for demo!</router-link></p>
           </div>
         </div>
       </transition>

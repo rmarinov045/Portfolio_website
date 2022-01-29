@@ -16,7 +16,7 @@
 
         <div v-show="!isAddTaskClicked" class="flex flex-col items-start gap-4">
           <div class="w-full flex flex-col items-start pl-4 p-2" v-for="task in tasks" :key="task.id">
-            <div class="flex flex-col items-start border-2 border-black w-full pl-4 pr-4 p-1 mt-4 gap-4 rounded-2xl pb-4">
+            <div class="bg-gray-100 flex flex-col items-start border-2 border-black w-full pl-4 pr-4 p-1 pt-2 mt-4 gap-4 rounded-2xl pb-4">
               <p class="font-bold border-b-2 border-black w-full flex justify-center items-center pb-2">{{ task.taskName }}
                 <svg @click="removeTask(task.taskID)" xmlns="http://www.w3.org/2000/svg" class="cursor-pointer h-6 w-6 text-red-500 ml-auto" fill="none" viewBox="0 0 24 24"
                      stroke="currentColor">
@@ -30,10 +30,10 @@
               </p>
               <hr class="w-full"/>
               <p class="text-sm flex items-center w-full">{{ task.taskDescription }}
-                <svg xmlns="http://www.w3.org/2000/svg" class="ml-auto h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
               </p>
+              <svg xmlns="http://www.w3.org/2000/svg" class="ml-auto h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
             </div>
           </div>
         </div>
@@ -69,8 +69,6 @@
             </button>
           </div>
         </div>
-
-        <p class="mt-20">... made with love by</p>
 
       </div>
 
