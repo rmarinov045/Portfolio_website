@@ -220,10 +220,10 @@
     <div class="flex flex-col bg-white shadow-2xl text-left p-4 w-2/3 m-auto mb-10">
       <div class="flex items-center">
         <h1 class="font-bold text-2xl">About myself:</h1>
-        <p ref='toggle-field' @click="editFunction" class="ml-auto cursor-pointer underline transform transition ease-in-out 150 font-bold">{{ editText }}</p>
+        <p id='toggle-field-big' @click="editFunction" class="ml-auto cursor-pointer underline transform transition ease-in-out 150 font-bold">{{ editText }}</p>
       </div>
       <br/>
-      <p ref="text-field" class="break-words p-2 outline-none transform transition ease-in-out 50" :contenteditable="editable">{{ aboutText }}</p>
+      <p id="text-field-big" class="break-words p-2 outline-none transform transition ease-in-out 50" :contenteditable="editable">{{ aboutText }}</p>
     </div>
 
   </div>
@@ -249,11 +249,15 @@ export default {
         this.editable = true
         document.getElementById('text-field').classList.add('ring-2', 'ring-green-500')
         document.getElementById('toggle-field').classList.add('text-green-500')
+        document.getElementById('text-field-big').classList.add('ring-2', 'ring-green-500')
+        document.getElementById('toggle-field-big').classList.add('text-green-500')
       } else {
         this.editText = 'Edit'
         this.editable = false
         document.getElementById('text-field').classList.remove('ring-2', 'ring-green-500')
         document.getElementById('toggle-field').classList.remove('text-green-500')
+        document.getElementById('text-field-big').classList.remove('ring-2', 'ring-green-500')
+        document.getElementById('toggle-field-big').classList.remove('text-green-500')
       }
     }
   }
