@@ -1,8 +1,8 @@
 <template>
-  <div class="">
+  <div class="flex flex-col flex-grow">
       <navbar ref="navbar"/>
-      <weather-component class="" @click="removeDropDown" />
-      <footer_component @click="removeDropDown"/>
+      <weather-component class="" @click="removeDropDown"/>
+      <footer_component class="mt-auto" @click="removeDropDown"/>
   </div>
 </template>
 

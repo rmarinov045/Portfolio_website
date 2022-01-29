@@ -62,7 +62,7 @@
 
     <hr class="mt-10"/>
 
-    <div ref="cards-container" id="cards-container" class="grid grid-cols-3 gap-10 w-full mt-10">
+    <div ref="cards-container-big" id="cards-container-big" class="grid grid-cols-3 gap-10 w-full mt-10">
       <div v-for="cities in this.cities" :key="cities.id" class="w-full bg-gray-200 justify-self-center rounded shadow-xl p-4 gap-6 flex flex-col items-start mt-10 transform transition ease-in-out 500">
         <p class="flex items-center gap-6 text-4xl font-bold">{{ cities.city }}<span class="mb-3 text-xl bg-yellow-500 rounded-2xl text-white p-1 pl-2 pr-2">{{ cities.country}}</span></p>
         <p class="text-6xl font-extrabold"> {{ cities.current }} °C</p>
@@ -149,7 +149,8 @@ export default {
       return this.cities.push({country: country, city: town, current: currentTemperature, min: minTemperature, max: maxTemperature, feel: feelsLike, icon: icon, description: description, id: id})
     },
     scrollToEnd() {
-       return this.$refs["cards-container"].scrollTop = this.$refs['cards-container'].lastElementChild.scrollIntoView({behavior: "smooth", block: "center"})
+      this.$refs["cards-container-big"].scrollTop = this.$refs['cards-container-big'].lastElementChild.scrollIntoView({behavior: "smooth", block: "center"})
+      return this.$refs["cards-container"].scrollTop = this.$refs['cards-container'].lastElementChild.scrollIntoView({behavior: "smooth", block: "center"})
     }
   },
   updated() {
