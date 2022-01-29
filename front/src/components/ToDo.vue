@@ -14,30 +14,39 @@
           <button type="submit" @click="toggleAddTask" :class="addTaskButton">{{ addTaskText }}</button>
         </div>
 
-        <div v-show="!isAddTaskClicked" class="flex flex-col items-start gap-4">
-          <div>
-            <div class="w-full flex flex-col items-start pl-4 p-2" v-for="task in tasks" :key="task.id">
+        <div v-show="!isAddTaskClicked" class="flex flex-col w-full items-start gap-4">
+          <div class="w-full">
+            <div id="task-container" class="flex flex-col flex-grow w-full items-start pl-4 p-2" v-for="task in tasks"
+                 :key="task.id">
               <div
                   class="bg-gray-100 flex flex-col items-start border-2 border-black w-full pl-4 pr-4 p-1 pt-2 mt-4 gap-4 rounded-2xl pb-4">
-                <p class="font-bold border-b-2 border-black w-full flex justify-center items-center pb-2">{{
-                    task.taskName
-                  }}
-                  <svg @click="removeTask(task.taskID)" xmlns="http://www.w3.org/2000/svg"
-                       class="cursor-pointer h-6 w-6 text-red-500 ml-auto" fill="none" viewBox="0 0 24 24"
-                       stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
-                  </svg>
-                </p>
-                <p class="text-sm font-bold flex items-center w-full"> {{ task.taskPlace }}
+                <div class="w-full flex border-b-2 border-black">
+                  <p class="font-bold flex justify-center items-center pb-2">{{
+                      task.taskName
+                    }}
+                  </p>
+                  <div class="ml-auto">
+                    <svg @click="removeTask(task.taskID)" xmlns="http://www.w3.org/2000/svg"
+                         class="cursor-pointer h-6 w-6 text-red-500 ml-auto" fill="none" viewBox="0 0 24 24"
+                         stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                    </svg>
+                  </div>
+                </div>
+                <div class="w-full flex">
+                  <p class="text-sm font-bold flex items-center w-full"> {{ task.taskPlace }}
+                  </p>
                   <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 ml-auto" fill="none" viewBox="0 0 24 24"
                        stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                           d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
                   </svg>
-                </p>
+                </div>
                 <hr class="w-full"/>
-                <p class="text-sm flex items-center w-full">{{ task.taskDescription }}
-                </p>
+                <div class="w-full break-words block max-w-full text-left">
+                  <p class="text-sm flex items-center w-full">{{ task.taskDescription }}
+                  </p>
+                </div>
                 <svg xmlns="http://www.w3.org/2000/svg" class="ml-auto h-6 w-6" fill="none" viewBox="0 0 24 24"
                      stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -101,28 +110,35 @@
         <hr class="mt-10"/>
 
         <div v-show="!isAddTaskClicked" class="grid grid-cols-4 items-start gap-4 items-center mt-10">
-          <div>
-            <div class="flex items-start pl-4 p-2 min-w-0 break-all" v-for="task in tasks" :key="task.taskID">
+            <div class="flex items-start pl-4 p-2 break-words" v-for="task in tasks" :key="task.taskID">
               <div
                   class="flex flex-col items-start bg-gray-200 w-full shadow-xl pl-4 pr-4 p-2 mt-4 gap-4 rounded-2xl pb-4">
-                <p class="font-bold border-b-2 border-black w-full flex justify-center items-center pb-2">{{
+                <div class="flex w-full">
+                <p class="font-bold border-b-2 border-black w-full flex items-center pb-2">{{
                     task.taskName
                   }}
-                  <svg @click="removeTask(task.taskID)" xmlns="http://www.w3.org/2000/svg"
-                       class="cursor-pointer h-6 w-6 text-red-500 ml-auto" fill="none" viewBox="0 0 24 24"
-                       stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
-                  </svg>
                 </p>
+                  <div class="border-b-2 border-black">
+                    <svg @click="removeTask(task.taskID)" xmlns="http://www.w3.org/2000/svg"
+                         class="cursor-pointer h-6 w-6 text-red-500 ml-auto" fill="none" viewBox="0 0 24 24"
+                         stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                    </svg>
+                  </div>
+                </div>
+                <div class="w-full flex">
                 <p class="text-sm font-bold flex items-center w-full"> {{ task.taskPlace }}
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 ml-auto" fill="none" viewBox="0 0 24 24"
-                       stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                          d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                  </svg>
                 </p>
-                <hr class="w-full"/>
-                <p class="text-sm inline-block items-center w-full break-words">{{ task.taskDescription }}</p>
+                  <div class="">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 ml-auto" fill="none" viewBox="0 0 24 24"
+                         stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                  </div>
+                </div>
+                <hr class="w-full border-1 border-gray-300"/>
+                <p class="text-sm inline-block items-center w-full break-words text-left">{{ task.taskDescription }}</p>
                 <svg xmlns="http://www.w3.org/2000/svg" class="ml-auto h-6 w-6" fill="none" viewBox="0 0 24 24"
                      stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -130,7 +146,6 @@
                 </svg>
               </div>
             </div>
-          </div>
         </div>
 
         <!-- Add task interface -->
@@ -263,5 +278,9 @@ export default {
 </script>
 
 <style scoped>
+
+#task-container {
+  flex-basis: 100%;
+}
 
 </style>
