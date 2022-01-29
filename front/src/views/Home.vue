@@ -1,10 +1,10 @@
 <template>
   <div class="home flex flex-col flex-grow">
     <navbar ref="navbar"/>
-    <Home_component @click="removeDropDown"/>
+    <Home_component class="flex flex-grow" @click="removeDropDown"/>
+    <footer_component @click="removeDropDown"/>
   </div>
 
-  <footer_component @click="removeDropDown"/>
 </template>
 
 <script>

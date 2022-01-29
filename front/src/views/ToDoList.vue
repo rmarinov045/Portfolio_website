@@ -1,12 +1,12 @@
 <template>
-  <div class="to-do">
+  <div class="to-do flex flex-col flex-grow">
 
     <navbar ref="navbar"/>
     <ToDo @click="removeDropDown"/>
+    <footer_component class="mt-auto" @click="removeDropDown"/>
 
   </div>
 
-  <footer_component class="mt-auto" @click="removeDropDown"/>
 </template>
 
 <script>

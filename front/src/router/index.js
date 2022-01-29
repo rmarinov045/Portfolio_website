@@ -39,6 +39,10 @@ const routes = [
     component: ToDoList
   },
   {
+    path: '/To%20Do%20List',
+    redirect: '/To Do List'
+  },
+  {
     path: '/weather',
     name: 'Weather',
     component: Weather

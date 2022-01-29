@@ -1,5 +1,5 @@
 <template>
-  <div id="footer"
+  <div id="footer-component"
        class="bg-black text-white font-bold flex flex-col justify-center items-center p-2 gap-4 relative w-full bottom-0">
     <div class="flex justify-center items-center gap-10">
       <a href="https://github.com/rmarinov045" rel="noreferrer" target="_blank"
@@ -37,7 +37,7 @@
 
 <script>
 export default {
-  name: "footer",
+  name: "footer-component",
   data() {
     return {
       heightToPass: 0,
