@@ -62,8 +62,8 @@
 
     <hr class="mt-10"/>
 
-    <div ref="cards-container" id="cards-container" class="grid grid-cols-3 w-full mt-10">
-      <div v-for="cities in this.cities" :key="cities.id" class="w-2/3 bg-gray-200 justify-self-center rounded shadow-xl p-4 gap-6 flex flex-col items-start mt-10 transform transition ease-in-out 500">
+    <div ref="cards-container" id="cards-container" class="grid grid-cols-3 gap-10 w-full mt-10">
+      <div v-for="cities in this.cities" :key="cities.id" class="w-full bg-gray-200 justify-self-center rounded shadow-xl p-4 gap-6 flex flex-col items-start mt-10 transform transition ease-in-out 500">
         <p class="flex items-center gap-6 text-4xl font-bold">{{ cities.city }}<span class="mb-3 text-xl bg-yellow-500 rounded-2xl text-white p-1 pl-2 pr-2">{{ cities.country}}</span></p>
         <p class="text-6xl font-extrabold"> {{ cities.current }} °C</p>
         <img alt="weather-icon" class="h-20 w-20 self-center" :src="cities.icon">
