@@ -21,7 +21,10 @@ export default {
     document.title = 'Projects - To Do List'
   },
   methods: {
-    removeDropDown() {
+    removeDropDown(e) {
+      if (e.target.localName === "a") {
+        return
+      }
       if (this.$refs.navbar.$refs['burger'].classList.contains('rotate-90')) {
         this.$refs.navbar.enableDropdown()
       }

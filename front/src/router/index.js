@@ -6,8 +6,14 @@ import Projects from "@/views/Projects";
 import ToDoList from "@/views/ToDoList";
 import Weather from '@/views/Weather'
 import CalculatorApp from "@/views/Calculator-app";
+import Unavailable from "@/views/Unavailable";
 
 const routes = [
+  {
+    path: '/:pathMatch(.*)*',
+    name: 'not-found',
+    component: Unavailable
+  },
   {
     path: '/',
     name: 'default',

@@ -93,6 +93,11 @@ export default {
       apiCalls: 0
     }
   },
+  mounted() {
+    if (this.$store.state.cities.length) {
+      this.cities = this.$store.state.cities
+    }
+  },
   methods: {
     async getWeather(cityName) {
 
@@ -146,6 +151,7 @@ export default {
         }
       }
       this.isNewElement = true
+      this.$store.dispatch('saveCity', {country: country, city: town, current: currentTemperature, min: minTemperature, max: maxTemperature, feel: feelsLike, icon: icon, description: description, id: id})
       return this.cities.push({country: country, city: town, current: currentTemperature, min: minTemperature, max: maxTemperature, feel: feelsLike, icon: icon, description: description, id: id})
     },
     scrollToEnd() {

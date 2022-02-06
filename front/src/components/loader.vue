@@ -2,7 +2,7 @@
   <transition name="loader-transition">
     <div class="w-screen h-screen flex flex-col justify-center items-center">
       <img src="../assets/newlogo.png" id="spinner" class="h-16 w-16 lg:h-24 lg:w-24">
-      <p class="mt-10 font-extrabold text-2xl">Loading</p>
+      <p class="mt-10 font-extrabold text-2xl">Loading...</p>
     </div>
   </transition>
 </template>

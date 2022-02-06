@@ -1,8 +1,8 @@
 <template>
-  <div class="h-screen w-screen flex justify-center items-center">
-    <p class="text-6xl font-bold">Ooops... looks like the page is not available at the moment due to an ongoing maintenance.</p>
-    <p class="text-4xl font-bold">Please try again later</p>
-    <p class="text-2xl font-bold">... Coding is love</p>
+  <div class="h-screen w-full p-4 flex flex-col justify-center items-center gap-10">
+    <p class="text-6xl font-bold">Ooops... looks like this page is not available at the moment</p>
+<!--    <p class="text-3xl font-bold">Please try again later</p>-->
+    <router-link class="text-2xl font-bold bg-black text-white p-4 rounded-2xl transform transition ease-in-out 150 hover:text-green-500" to="/Home">Go back to home</router-link>
   </div>
 </template>
 

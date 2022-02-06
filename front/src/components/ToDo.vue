@@ -208,6 +208,11 @@ export default {
       tasks: []
     }
   },
+  mounted() {
+    if (this.$store.state.tasks.length) {
+      this.tasks = this.$store.state.tasks
+    }
+  },
   methods: {
     toggleAddTask() {
       this.isAddTaskClicked = !this.isAddTaskClicked
@@ -256,6 +261,7 @@ export default {
       let taskID = Math.random() * 100
       let task = new Task(name, place, description, taskID)
       this.tasks.push(task)
+      this.$store.dispatch("saveTask", task)
 
       this.isAddTaskClicked = false
       this.addTaskText = 'Add Task'
@@ -271,6 +277,7 @@ export default {
           this.tasks = this.tasks.filter(task => task.taskID !== items.taskID)
         }
       }
+      this.$store.state.tasks = this.tasks
       return this.tasks
     }
   }

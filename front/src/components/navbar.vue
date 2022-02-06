@@ -1,5 +1,7 @@
 <template class="">
 
+  <div class="">
+
   <!-- Mobile navbar sandwich -->
 
   <div class="lg:hidden w-full flex items-center p-2 pl-4 pr-4 text-white shadow top-0 bg-black border-b-2 border-green-500">
@@ -54,10 +56,10 @@
     <transition class="search-transition">
       <form class="">
         <p class="mb-10 text-3xl font-bold">Search this website</p>
-        <input @keyup="search" type="text" class="outline-none border-b-2 border-black border-solid pl-2 w-1/2"
+        <input @keyup="search" type="text" class="transform transition ease-in-out 150 outline-none border-b-2 border-black border-solid pl-2 w-1/2 focus:border-green-500"
                placeholder="Type for suggestions..." v-model="searchQuery">
-        <div class="flex w-1/2 m-auto items-start pl-5 gap-2 mt-3 flex-col">
-        <router-link :to="page.name" v-for="page in searchShown" :key="page.id" :class="searchWordClass">{{ page.name }}</router-link>
+        <div class="grid auto-cols-fr m-auto items-start pl-5 gap-2 mt-3">
+        <router-link v-cloak :to="page.name" v-for="page in searchShown" :key="page.id" :class="searchWordClass">{{ page.name }}</router-link>
         </div>
       </form>
     </transition>
@@ -88,21 +90,23 @@
 
   <!-- lg and above screens search -->
 
-  <div v-show="searchFieldOpen" class="fixed h-4/6 w-1/2 left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20 overflow-hidden flex justify-center">
+  <div v-show="searchFieldOpen" class="fixed transform transition ease-in-out 150 w-1/2 left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20 overflow-hidden flex justify-center">
     <div class="bg-gradient-to-b from-gray-900 via-gray-800 to-gray-700 h-full w-full rounded-2xl p-4">
 
       <div class="flex w-full justify-center items-center gap-2">
-        <input id="search-field" tabindex="0" @keyup="search" v-model="searchQuery" type="text" placeholder="Search..." class="focus:border-green-500 text-white transform transition ease-in-out 150 text-center bg-black outline-none pl-2 pt-0.5 pb-0.5 w-56 border-2 rounded-3xl border-solid border-white">
+        <input tabindex="0" @keyup="search" v-model="searchQuery" type="text" placeholder="Search..." class="focus:border-green-500 text-white transform transition ease-in-out 150 text-center bg-black outline-none pl-2 pt-0.5 pb-0.5 w-56 border-2 rounded-3xl border-solid border-white">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 cursor-default text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
         </svg>
       </div>
 
-      <div class="text-white w-full h-5/6 mt-6 p-4 flex flex-col gap-4 justify-start items-start pl-5 border-2 border-gray-500 rounded-3xl">
+      <div id="searchField" class="text-white w-full mt-6 p-4 flex flex-col gap-4 justify-start items-start pl-5 border-2 border-gray-500 rounded-3xl">
         <router-link :to="page.name" v-for="page in searchShown" :key="page.id" :class="searchKeyWordClassLG">{{ page.name }}</router-link>
       </div>
 
     </div>
+  </div>
+
   </div>
 
 </template>
@@ -159,7 +163,7 @@ export default {
             this.searchKeyWordClassLG = 'cursor-default'
             return this.searchShown
           }
-          this.searchWordClass = 'hover:opacity-75 transform transition ease-in-out 150'
+          this.searchWordClass = 'hover:border-gray-700 transform transition ease-in-out 150 border-2 border-solid p-2 focus:outline-none focus:border-green-500'
           this.searchKeyWordClassLG = ' hover:border-white hover:bg-gray-700 w-full text-left p-4 transform transition ease-in-out-150 border-t-2 border-b-2 border-solid border-gray-700'
           return this.searchShown
         } else {
@@ -204,5 +208,9 @@ export default {
   100% {
     transform: scaleY(1);
   }
+}
+
+#searchField {
+  min-height: 20rem;
 }
 </style>

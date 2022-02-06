@@ -42,11 +42,14 @@
                       class="tranform transition ease-in-out 150 border-2 border-solid rounded p-2 mt-2 outline-none focus:border-green-500"></textarea>
           </div>
 
-          <div class="flex w-full justify-center">
+          <div class="flex w-full justify-center flex-col gap-4 items-center">
             <button id="submit-button-mobile" @click="collectFormData" ref="submit" type="submit"
                     class="hover:opacity-80 transform transition ease-in-out 150 font-bold bg-black text-white p-2 w-1/2 focus:outline-none">
               Submit
             </button>
+            <div id="error" class="hidden w-1/2 rounded-2xl p-2 transform transition ease-in-out 500 bg-red-500 text-white font-bold">
+              <p class="">Oops... something went wrong. Please try again later.</p>
+            </div>
           </div>
 
         </form>
@@ -108,11 +111,14 @@
                         class="transform transition ease-in-out 150 border-2 border-solid rounded p-2 mt-2 outline-none focus:border-green-500"></textarea>
             </div>
 
-            <div class="flex w-full justify-center">
+            <div class="flex flex-col w-full gap-4 justify-center items-center">
               <button ref="submit" id="submit-button" type="submit"
                       class="hover:opacity-80 transform transition ease-in-out 150 font-bold bg-black text-white p-2 w-1/2 focus:outline-none">
                 Submit
               </button>
+              <div id="error" class="hidden w-1/2 rounded-2xl p-2 transform transition ease-in-out 500 bg-red-500 text-white font-bold">
+                <p class="">Oops... something went wrong. Please try again later.</p>
+              </div>
             </div>
 
           </form>
@@ -205,10 +211,10 @@ export default {
       document.getElementById('contact-form-mobile').reset()
 
       button.style.backgroundColor = '#4caf50'
-      button.innerText = 'Success!'
+      button.innerText = 'Email sent!'
       button.disabled = true
       mobileButton.style.backgroundColor = '#4caf50'
-      mobileButton.innerText = 'Success!'
+      mobileButton.innerText = 'Email sent!'
       mobileButton.disabled = true
 
       setTimeout(() => {

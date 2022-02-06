@@ -28,7 +28,10 @@ export default {
     }
   },
   methods: {
-    removeDropDown() {
+    removeDropDown(e) {
+      if (e.target.localName === "p" || e.target.localName === 'a') {
+        return
+      }
       if (this.$refs.navbar.$refs['burger'].classList.contains('rotate-90')) {
         this.$refs.navbar.enableDropdown()
       }

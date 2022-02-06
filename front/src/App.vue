@@ -1,6 +1,6 @@
 <template>
-  <router-view v-cloak v-show="isLoaded" class="main"/>
   <loader v-if="!isLoaded" class="loader"/>
+  <router-view v-cloak v-show="isLoaded" class="main"/>
 </template>
 
 <script>
@@ -14,7 +14,7 @@ export default {
       isLoaded: false
     }
   },
-  created() {
+  mounted() {
     this.isLoaded = true
   }
 }
