@@ -4,6 +4,8 @@ Hi,
 
 This is my personal portfolio website, built using VueJS and TailiwindCSS. 
 
+** First project built for educational purposes **
+
 It includes info about me, my skillset and some demos to get to know what I do.
 
 Feel free to leave any feedback!
