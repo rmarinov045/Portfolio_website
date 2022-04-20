@@ -113,7 +113,7 @@ export default {
 
       this.apiCalls++
 
-      const apiKey = "&appid=b13bc36f06f4707b02ec99c138870fe8&units=metric"
+      const apiKey = `&appid=${process.env.VUE_APP_WEATHER_API_KEY}&units=metric`
       const url = "https://api.openweathermap.org/data/2.5/weather?"
       let city = `q=${cityName}`
       let requestUrl = url + city + apiKey
