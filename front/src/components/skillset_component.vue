@@ -117,10 +117,8 @@
     <div class="flex flex-col bg-white shadow-2xl text-left p-4 w-full mb-5">
       <div class="flex items-center">
       <h1 class="font-bold">About myself:</h1>
-<!--        <p id='toggle-field' @click="editFunction" class="text-sm ml-auto cursor-pointer underline transform transition ease-in-out 150 font-bold">{{ editText }}</p>-->
       </div>
       <br/>
-<!--      <p id="text-field" class="text-sm break-words p-2 outline-none transform transition ease-in-out 50" :contenteditable="editable">{{ aboutText }}</p>-->
       <ul class="flex-col flex gap-2">
         <li class="flex gap-3"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
@@ -162,7 +160,7 @@
       </div>
     </div>
 
-    <div class="flex flex-col gap-1 mt-10 bg-black rounded shadow-xl bg-opacity-95 text-white w-5/6 m-auto p-4">
+    <div class="flex flex-col gap-1 mt-10 bg-black rounded shadow-xl bg-opacity-95 text-white w-5/6 m-auto p-4 lg:w-2/3">
       <h1 class="font-bold text-xl">What I do</h1>
       <p class="text-xs text-gray-400">Technologies</p>
 
